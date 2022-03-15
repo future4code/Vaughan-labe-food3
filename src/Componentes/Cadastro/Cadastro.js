@@ -2,22 +2,17 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {useSemProtecao} from "../useSemProtecao/useSemProtecao"
+import { useSemProtecao } from "../useSemProtecao/useSemProtecao";
 
-<<<<<<< HEAD
 const Cadastro = () => {
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
   const [cpf, setCpf] = useState();
   const [senha, setSenha] = useState();
   const [conf_senha, setConf_senha] = useState();
-=======
-const Cadastro= () => {
-    const navigate=useNavigate();
-    useSemProtecao();
->>>>>>> master
 
   const navigate = useNavigate();
+  useSemProtecao();
 
   const cadastrarEndereco = () => {
     navigate("/cadastro/endereco");
@@ -70,7 +65,7 @@ const Cadastro= () => {
       .then((resp) => {
         localStorage.setItem("token", resp.data.token);
         alert("Otimo, o cadastro do perfil foi efetuado com Sucesso!");
-        console.log("O Token é:", resp.data.token)
+        console.log("O Token é:", resp.data.token);
         limpaInput();
         cadastrarEndereco();
       })
