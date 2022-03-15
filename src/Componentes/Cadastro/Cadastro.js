@@ -61,7 +61,9 @@ const Cadastro = () => {
       )
 
       .then((resp) => {
+        localStorage.setItem("token", resp.data.token);
         alert("Otimo, o cadastro do perfil foi efetuado com Sucesso!");
+        console.log("O Token é:", resp.data.token)
         limpaInput();
         cadastrarEndereco();
       })
