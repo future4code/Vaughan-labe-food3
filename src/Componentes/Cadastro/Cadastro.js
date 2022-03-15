@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import {useSemProtecao} from "../useSemProtecao/useSemProtecao"
 
 const Cadastro= () => {
     const navigate=useNavigate();
+    useSemProtecao();
 
     const cadastrarEndereco= () => {
         navigate("/cadastro/endereco");

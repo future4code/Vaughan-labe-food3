@@ -1,9 +1,11 @@
 import React from "react";
 import BotoesLogado from "../BotoesLogado/BotoesLogado";
 import { useNavigate } from "react-router-dom";
+import {useProtecao} from "../useProtecao/useProtecao";
 
 const FinalizarPedido= () => {
     const navigate= useNavigate();
+    useProtecao();
 
     const irParaHome= () => {
         navigate("/home");

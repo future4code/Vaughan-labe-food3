@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import {useProtecao} from "../useProtecao/useProtecao";
 
 const MeuPerfilEditarEndereco= () => {
     const navigate= useNavigate();
+    useProtecao();
 
     const irParaMeuPerfil= () => {
         navigate("/meuperfil");

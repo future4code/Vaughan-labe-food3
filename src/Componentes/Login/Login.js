@@ -2,10 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import useForms from "../Hook/useForms";
+import {useSemProtecao} from "../useSemProtecao/useSemProtecao";
 
 const Login= () => {
     const navigate= useNavigate();
     const {form, onChangeForm, clear}= useForms({email:"", password:""})
+    useSemProtecao();
 
     const onSubmitForm= event => {
         event.preventDefault();
@@ -22,8 +24,9 @@ const Login= () => {
             .then(response => {
                 if(!response.data.user.hasAddress){
                     return navigate("/cadastro/endereco");
-                }
-            
+                };
+
+                localStorage.setItem("token", response.data.token)
                 navigate("/home");
             })
             .catch(() => {
