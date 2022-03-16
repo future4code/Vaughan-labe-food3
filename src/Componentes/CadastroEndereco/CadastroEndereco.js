@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSemProtecao } from "../useSemProtecao/useSemProtecao";
 
 const CadastroEndereco = () => {
   const [logradouro, setLogradouro] = useState();
@@ -13,12 +12,11 @@ const CadastroEndereco = () => {
   const [estado, setEstado] = useState();
 
   const navigate = useNavigate();
-  useSemProtecao();
-
+  
   const irParaHome = () => {
     navigate("/home");
   };
-
+  
   const manLogradouro = (event) => {
     setLogradouro(event.target.value);
   };
@@ -56,31 +54,28 @@ const CadastroEndereco = () => {
     event.preventDefault();
 
     const body = {
-      street: logradouro,
-      number: numero,
-      neighbourhood: bairro,
-      city: cidade,
-      state: estado,
-      complement: complemento,
+      "street": logradouro,
+      "number": numero,
+      "neighbourhood": bairro,
+      "city": cidade,
+      "state": estado,
+      "complement": complemento,
     };
 
-    const token = localStorage.getItem("token");
+    const token= localStorage.getItem("token");
+    const url="https://us-central1-missao-newton.cloudfunctions.net/fourFoodB/address";
+    const header={
+      headers:{
+        "auth": token,
+        "Content-Type": "application/json"
+      }
+    }
 
     axios
-      .put(
-        "https://us-central1-missao-newton.cloudfunctions.net/fourFoodB/address",
-        { body },
-        {
-          headers: {
-            auth: token,
-          },
-        }
-      )
-
+      .put(url, body, header)
       .then((resp) => {
         localStorage.setItem("token", resp.data.token);
         alert("Legal, o cadastro do endereço efetuado com Sucesso!");
-        console.log("Agora o Token é:", resp.data.token);
         limpaInput();
         irParaHome();
       })
@@ -91,7 +86,7 @@ const CadastroEndereco = () => {
         );
       });
   };
-
+  
   return (
     <div>
       <h1> Cadastro de Endereço </h1>
@@ -139,7 +134,7 @@ const CadastroEndereco = () => {
           onChange={manEstado}
           required
         />
-        <button onClick={irParaHome}> Salvar </button>
+        <button> Salvar </button>
       </form>
     </div>
   );
