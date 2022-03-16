@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cadastro from "../Componentes/Cadastro/Cadastro";
 import CadastroEndereco from "../Componentes/CadastroEndereco/CadastroEndereco";

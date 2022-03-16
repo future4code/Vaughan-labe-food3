@@ -22,10 +22,10 @@ const Login= () => {
         axios
             .post(url, form, header)
             .then(response => {
-                if(!response.data.user.hasAddress){
+                if(response.data.user.hasAddress === false){
                     return navigate("/cadastro/endereco");
                 };
-
+                
                 localStorage.setItem("token", response.data.token)
                 navigate("/home");
             })
