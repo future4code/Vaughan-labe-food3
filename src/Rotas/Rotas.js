@@ -8,7 +8,6 @@ import Home from "../Componentes/Home/Home";
 import Login from "../Componentes/Login/Login";
 import MeuPerfil from "../Componentes/MeuPerfil/MeuPerfil";
 import PaginaInicial from "../Componentes/PaginaInicial/PaginaInicial";
-import FinalizarPedido from "../Componentes/FinalizarPedido/FinalizarPedido";
 import MeuPerfilEditarNome from "../Componentes/MeuPerfilEditarNome/MeuPerfilEditarNome";
 import MeuPerfilEditarEndereco from "../Componentes/MeuPerfilEditarEndereco/MeuPerfilEditarEndereco";
 
@@ -28,7 +27,6 @@ const Rotas= () => {
                     <Route path="/meuperfil/editarnome" element={<MeuPerfilEditarNome/>}/>
                     <Route path="/meuperfil/editarendereco" element={<MeuPerfilEditarEndereco/>}/>
                     <Route path="/carrinho" element={<Carrinho/>}/>
-                    <Route path="/carrinho/finalizarpedido" element={<FinalizarPedido/>}/>
 
                 </Routes>
             

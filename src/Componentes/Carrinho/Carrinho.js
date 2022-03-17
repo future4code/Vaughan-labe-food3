@@ -7,14 +7,14 @@ const Carrinho= () => {
     const navigate= useNavigate();
     useProtecao();
 
-    const irParaFinalizar= () => {
-        navigate("/carrinho/finalizarpedido");
+    const irParaHome= () => {
+        navigate("/home");
     };
 
     return (
         <div>
             <h1>Carrinho</h1>
-            <button onClick={irParaFinalizar}>Confirmar</button>
+            <button onClick={irParaHome}>Confirmar</button>
             <BotoesLogado/>
         </div>
     )
