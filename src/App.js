@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Rotas from './Rotas/Rotas';
+import Contexto from "./Contexto/Contexto";
 
 function App() {
+  const [profile, setProfile]= useState([])
+
+  const armazenarProfile= perfil => {
+      setProfile(perfil);
+  };
+
   return (
-    <div>
+    <Contexto.Provider value={[profile, armazenarProfile]}>
       <Rotas/>
-    </div>
+    </Contexto.Provider>
   );
 }
 
