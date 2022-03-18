@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSemProtecao } from "../useSemProtecao/useSemProtecao";
-import { Base, Logo, Titulo, Input, Botao, BotaoVazio, Bloco } from "./styled";
+import { Base, Logo, Titulo, Input, Botao, Bloco } from "./styled";
 import Logo1 from "../Media/logo1.png";
 
 const Cadastro = () => {

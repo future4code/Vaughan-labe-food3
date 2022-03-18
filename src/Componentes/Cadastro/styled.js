@@ -48,12 +48,3 @@ export const Botao = styled.button`
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
 `;
-
-export const BotaoVazio = styled.button`
-  margin: 10px;
-  border: none;
-  color: black;
-  background: none;
-  text-decoration: none;
-  cursor: pointer;
-`;
