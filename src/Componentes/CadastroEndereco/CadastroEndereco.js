@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Base, Titulo, Input, Botao } from "./styled";
 
 const CadastroEndereco = () => {
   const [logradouro, setLogradouro] = useState();
@@ -88,55 +89,55 @@ const CadastroEndereco = () => {
   };
   
   return (
-    <div>
-      <h1> Cadastro de Endereço </h1>
+    <Base>
+      <Titulo> Meu endereço </Titulo>
 
       <form onSubmit={fazCadstro}>
-        <input
+        <Input
           placeholder="Rua/Av."
           type="text"
           value={logradouro}
           onChange={manLogradouro}
           required
         />
-        <input
-          placeholder="Numero"
+        <Input
+          placeholder="Número"
           type="Number"
           value={numero}
           onChange={manNumero}
           required
         />
-        <input
+        <Input
           placeholder="Apto. / Bloco"
           value={complemento}
           onChange={manComplemento}
           type="text"
           required
         />
-        <input
+        <Input
           placeholder="Bairro"
           type="text"
           value={bairro}
           onChange={manBairro}
           required
         />
-        <input
+        <Input
           placeholder="Cidade"
           type="text"
           value={cidade}
           onChange={manCidade}
           required
         />
-        <input
+        <Input
           placeholder="Estado"
           type="text"
           value={estado}
           onChange={manEstado}
           required
         />
-        <button> Salvar </button>
+        <Botao> Salvar </Botao>
       </form>
-    </div>
+    </Base>
   );
 };
 
