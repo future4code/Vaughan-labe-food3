@@ -1,20 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Img, Tela } from "./styled";
+import Telainicial from "../../Assets/telainicial.png"
 
-const PaginaInicial= () => {
-    const navigate= useNavigate();
-    
-    const temporizador= () => {
+const PaginaInicial = () => {
+    const navigate = useNavigate();
+
+    const temporizador = () => {
         setTimeout(() => {
             navigate("/login")
         }, 3000)
     }
 
     return (
-        <div>
-            <h1>4Food</h1>
+        <Tela>
+            <Img src={Telainicial} alt="imagem ver" />
             {temporizador()}
-        </div>
+
+        </Tela>
     )
 };
 
