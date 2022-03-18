@@ -14,7 +14,7 @@ const PaginaInicial = () => {
 
     return (
         <Tela>
-            <Img src={Telainicial} alt="imagem ver" />
+            <Img src={Telainicial} alt="tela vermelha escrito em branco Ifuture" />
             {temporizador()}
 
         </Tela>
