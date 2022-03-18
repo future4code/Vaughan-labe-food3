@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSemProtecao } from "../useSemProtecao/useSemProtecao";
+import { Base, Logo, Titulo, Input, Botao, BotaoVazio, Bloco } from "./styled";
+import Logo1 from "../Media/logo1.png";
 
 const Cadastro = () => {
   const [nome, setNome] = useState();
@@ -88,25 +90,26 @@ const Cadastro = () => {
   };
 
   return (
-    <div>
-      <h1>Cadastrar</h1>
+    <Base>
+      <Bloco> <Logo src={Logo1} /> </Bloco>
+      <Bloco> <Titulo> Cadastrar </Titulo> </Bloco>
 
       <form onSubmit={fazCadstro}>
-        <input
-          placeholder="Nome e sobrenome"
+        <Input
+          placeholder="Nome e Sobrenome"
           type="text"
           value={nome}
           onChange={manNome}
           required
         />
-        <input
+        <Input
           placeholder="E-mail"
           type="text"
           value={email}
           onChange={manEmail}
           required
         />
-        <input
+        <Input
           placeholder="CPF"
           value={cpf}
           onChange={manCpf}
@@ -116,14 +119,14 @@ const Cadastro = () => {
           title={"Digite um CPF no formato: xxx.xxx.xxx-xx"}
           required
         />
-        <input
+        <Input
           placeholder="Senha"
           type="password"
           value={senha}
           onChange={manSenha}
           required
         />
-        <input
+        <Input
           placeholder="Confirme a senha anterior"
           type="password"
           pattern=".{6,}"
@@ -133,9 +136,9 @@ const Cadastro = () => {
           required
         />
 
-        <button> Criar </button>
+        <Botao> Criar </Botao>
       </form>
-    </div>
+    </Base>
   );
 };
 
