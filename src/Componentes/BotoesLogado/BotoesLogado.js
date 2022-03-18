@@ -1,5 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Home from "../../Assets/homepage.svg";
+import Carrinho from "../../Assets/shopping-cart.svg";
+import Avatar from "../../Assets/avatar.svg";
+import {ContainerImagens, Imagem} from "./styled";
 
 const BotoesLogado= () => {
     const navigate= useNavigate();
@@ -18,11 +22,11 @@ const BotoesLogado= () => {
 
 
     return(
-        <div>
-            <button onClick={irParaHome}>Home</button>
-            <button onClick={irParaCarrinho}>Carrinho</button>
-            <button onClick={irParaMeuPerfil}>Meu Perfil</button>
-        </div>
+        <ContainerImagens>
+            <Imagem src={Home} onClick={irParaHome}/>
+            <Imagem src={Carrinho} onClick={irParaCarrinho}/>
+            <Imagem src={Avatar} onClick={irParaMeuPerfil}/>
+        </ContainerImagens>
     )
 };
 

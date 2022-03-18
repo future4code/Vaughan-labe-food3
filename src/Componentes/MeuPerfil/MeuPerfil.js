@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
-import BotoesLogado from "../BotoesLogado/BotoesLogado";
 import { useNavigate } from "react-router-dom";
 import {useProtecao} from "../useProtecao/useProtecao";
 import axios from "axios";
 import Contexto from "../../Contexto/Contexto";
+import {ProfilePage, Bar, ContainerTitle, Title, ContainerSpan, NomeUsuario, EmailUsuario, Span, Rectangle, EnderecoCadastrado, Rua, ContainerHistorico, HistoricoDePedidos, Linha, ContainerTitleHistorico, DivDeImagens, Imagem, ContainerImagens, Icones} from "./styled";
+import Editar from "../../Assets/edit.svg";
+import Carrinho from "../../Assets/shopping-cart.svg";
+import Avatar from "../../Assets/avatar.svg";
+import Home from "../../Assets/homepage.svg";
 
 const MeuPerfil= () => {
     const navigate= useNavigate();
@@ -68,11 +72,11 @@ const MeuPerfil= () => {
     
     const mostrarDadosDoUsuario= () => {
         return(
-            <div>
-                <p>{usuario.name}</p>
-                <p>{usuario.email}</p>
-                <p>{usuario.cpf}</p>
-            </div>
+            <ContainerSpan>
+                <NomeUsuario>{usuario.name}</NomeUsuario>
+                <EmailUsuario>{usuario.email}</EmailUsuario>
+                <Span>{usuario.cpf}</Span>
+            </ContainerSpan>
         );
     };
 
@@ -96,32 +100,53 @@ const MeuPerfil= () => {
 
     const mostrarEndereco= () => {
         return(
-            <div>
-                <p>{`Rua ${endereco.street}, ${endereco.number} - ${endereco.neighbourhood}`}</p>
-            </div>
+            <Rectangle>
+                <EnderecoCadastrado>Endereço cadastrado</EnderecoCadastrado>
+                <Rua>{`Rua ${endereco.street}, ${endereco.number} - ${endereco.neighbourhood}`}</Rua>
+            </Rectangle>
         );
     };
     
     return (
-        <div>
-            <h1>Meu Perfil</h1>
+        <ProfilePage>
+            <Bar>
+                <ContainerTitle>
+                    <Title>Meu Perfil</Title>
+
+                </ContainerTitle>
+            </Bar>
             
-            <div>
+            <DivDeImagens>
                 {mostrarDadosDoUsuario()}
-                <button onClick={irParaEditarNome}>Editar Nome</button>
-            </div>
-            <div>
-                <h3>Endereço cadastrado</h3>
+                <Imagem src={Editar} onClick={irParaEditarNome}/>
+            </DivDeImagens>
+
+            <DivDeImagens>
                 {mostrarEndereco()}
-                <button onClick={irParaEditarEndereco}>Editar Endereço</button>
-            </div>
+                <Imagem src={Editar} onClick={irParaEditarEndereco}/>
+            </DivDeImagens>
 
-            <div>
-                <h3>Histórico de pedidos</h3>
+            <ContainerHistorico>
+                <HistoricoDePedidos>Histórico de pedidos</HistoricoDePedidos>
 
-            </div>
-            <BotoesLogado/>
-        </div>
+                <Linha></Linha>
+
+                <ContainerTitleHistorico>
+                    {historico.length?"":"Você não realizou nenhum pedido"}
+
+                </ContainerTitleHistorico>
+
+            </ContainerHistorico>
+
+            
+            <ContainerImagens>
+                <Icones src={Home} onClick={() => navigate("/home")}/>
+                <Icones src={Carrinho} onClick={() => navigate("/carrinho")}/>
+                <Icones src={Avatar} onClick={() => navigate("/meuperfil")}/>
+
+            </ContainerImagens>
+            
+        </ProfilePage>
     )
 };
 
