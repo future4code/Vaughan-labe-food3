@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import {useProtecao} from "../useProtecao/useProtecao";
 import axios from "axios";
 import Contexto from "../../Contexto/Contexto";
+import Voltar from "../../Assets/back.svg";
+import {ProfilePageedituser, Bar, Imagem, ContainerTitle, Title, Form,Input} from "./styled";
 
 const MeuPerfilEditarNome= () => {
     const navigate= useNavigate();
@@ -55,25 +57,31 @@ const MeuPerfilEditarNome= () => {
     };
     
     return (
-        <div>
-            <h1>Editar</h1>
+        <ProfilePageedituser>
+            <Bar>
+                <Imagem src={Voltar} onClick={() => navigate("/meuperfil")}/>
+                <ContainerTitle>
+                    <Title>Editar</Title>
 
-            <form onSubmit={atualizarCadastro}>
-                <input
+                </ContainerTitle>
+            </Bar>
+
+            <Form onSubmit={atualizarCadastro}>
+                <Input
                     placeholder="Nome e sobrenome"
                     type="text"
                     value={nome}
                     onChange={manNome}
                     required
                 />
-                <input
+                <Input
                     placeholder="E-mail"
                     type="text"
                     value={email}
                     onChange={manEmail}
                     required
                 />
-                <input
+                <Input
                     placeholder="CPF"
                     value={cpf}
                     onChange={manCpf}
@@ -86,10 +94,10 @@ const MeuPerfilEditarNome= () => {
 
                 <button>Salvar</button>
                 
-            </form>
+            </Form>
 
             
-        </div>
+        </ProfilePageedituser>
     )
 };
 
