@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
-font-family: roboto;
+display: flex;
+flex-direction: column;
 align-items: center;
-text-align: center;
-min-height: 100vh;
+font-family: roboto;
 >p{
     border-bottom: 1px solid #B8B8B8;
     width: 100%;
