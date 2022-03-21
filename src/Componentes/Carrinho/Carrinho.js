@@ -2,6 +2,7 @@ import React from "react";
 import BotoesLogado from "../BotoesLogado/BotoesLogado";
 import { useNavigate } from "react-router-dom";
 import {useProtecao} from "../useProtecao/useProtecao";
+import { Body } from "./styled";
 
 const Carrinho= () => {
     const navigate= useNavigate();
@@ -12,11 +13,13 @@ const Carrinho= () => {
     };
 
     return (
-        <div>
-            <h1>Carrinho</h1>
-            <button onClick={irParaHome}>Confirmar</button>
+        <Body>
+            <p>Carrinho</p>
+            <div>
+               <p>Não disponível no momento</p> 
+            </div>            
             <BotoesLogado/>
-        </div>
+        </Body>
     )
 };
 

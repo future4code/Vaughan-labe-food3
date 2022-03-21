@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import BotoesLogado from "../BotoesLogado/BotoesLogado";
 import {useProtecao} from "../useProtecao/useProtecao";
 import DetalhesProdutosCard from './DetalhesProdutosCard'
+import { Body, RestaurantInfo } from "./styled";
 
 const DetalhesDoProduto= () => {
     useProtecao();
@@ -33,11 +34,7 @@ const DetalhesDoProduto= () => {
         setMenu(res.data.restaurant.products)})
     .catch((err) => {console.log(err.data)})
     }
-
-    console.log(restaurant)
-    console.log(menu)
-
-        
+    
   const menuCard = menu.map((product) => {
     return (
       <DetalhesProdutosCard
@@ -53,21 +50,24 @@ const DetalhesDoProduto= () => {
 
 
     return (
-        <div>
-            <h1>Detalhes do Produto</h1>
+        <Body>
+            <p>Restaurante</p>
             <BotoesLogado/>
             
-            <div>
-               <h3>{restaurant.name}</h3>
+            <RestaurantInfo>
+                <img src={restaurant.logoUrl} alt={restaurant.name}/>
+                <h3>{restaurant.name}</h3>
                 <p>{restaurant.category}</p>
-                <p>{restaurant.deliveryTime} min</p>
-                <p>Frete R${restaurant.shipping},00</p>
+                <div>
+                  <p>{restaurant.deliveryTime} min</p>
+                  <p>Frete R${restaurant.shipping},00</p>
+                </div>                
                 <p>{restaurant.address}</p> 
-            </div>
+            </RestaurantInfo>
 
             {menuCard}
             
-        </div>
+        </Body>
     )
 };
 

@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import {useProtecao} from "../useProtecao/useProtecao";
+import Voltar from "../../Assets/back.svg";
 import axios from "axios";
+import { Bar, Body, Imagem, Title } from "./styled";
 
 const MeuPerfilEditarEndereco= () => {
     const [logradouro, setLogradouro] = useState();
@@ -88,9 +90,12 @@ const MeuPerfilEditarEndereco= () => {
     };
 
     return (
-        <div>
+        <Body>
 
-            <h1>Endereço</h1>
+            <Bar>
+                <Imagem src={Voltar} onClick={() => navigate("/meuperfil")}/>
+                <Title>Editar Endereço</Title>
+            </Bar>
 
 
             <form onSubmit={atualizarCadastro}>
@@ -139,8 +144,8 @@ const MeuPerfilEditarEndereco= () => {
 
                 <button> Salvar </button>
             </form>
-            
-        </div>
+                        
+        </Body>
     )
 };
 

@@ -60,10 +60,7 @@ const MeuPerfilEditarNome= () => {
         <ProfilePageedituser>
             <Bar>
                 <Imagem src={Voltar} onClick={() => navigate("/meuperfil")}/>
-                <ContainerTitle>
-                    <Title>Editar</Title>
-
-                </ContainerTitle>
+                <Title>Editar</Title>
             </Bar>
 
             <Form onSubmit={atualizarCadastro}>
@@ -95,7 +92,6 @@ const MeuPerfilEditarNome= () => {
                 <button>Salvar</button>
                 
             </Form>
-
             
         </ProfilePageedituser>
     )
