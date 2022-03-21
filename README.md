@@ -1,6 +1,6 @@
 # Projeto IFUTURE 
 
-Link do Surge: 
+Link do Surge: erratic-girl.surge.sh
 
 <a href="sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#funciona">O que funciona</a> | <a href="#nao-funciona">Backlog</a> | <a href="#devs">Desenvolvedores</a>
 
@@ -19,7 +19,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * JavaScript
 * CSS
 * React
-* estilização feita utilizando Stuled-components
+* estilização feita utilizando Styled-components
 * React Router
 * <a href="https://documenter.getpostman.com/view/7549981/SWTEdGtT#a671fbe5-a360-4cd3-b269-d5a121e19da0" target="_blank">API</a>
 
@@ -39,9 +39,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
     
 ## <h2 id="nao-funciona">❎ Backlog</h2>
 
-- 
-
-- 
+- Funcionalidades do Carrinho
    
   
 ## <h2 id="devs">💼 Desenvolvedores</h2>
