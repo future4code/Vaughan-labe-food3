@@ -1,6 +1,7 @@
-# Projeto IFUTURE 
+# Projeto IFUTURE 🍔
 
-Link do Surge: erratic-girl.surge.sh
+Link do Surge:  agreeable-jewel.surge.sh
+
 
 <a href="sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#funciona">O que funciona</a> | <a href="#nao-funciona">Backlog</a> | <a href="#devs">Desenvolvedores</a>
 
@@ -29,18 +30,27 @@ As seguintes ferramentas foram usadas na construção do projeto:
     * É a página inicial do site, mostra o logo do site e em seguida redireciona para a tela de login.
     
 - Tela de Login:
-    * Dispoe de campos para inserir email e senha.
+    * Dispõe de campos para inserir email e senha.
     * Também há a opção para realizar um novo cadastro caso o usuário ainda não tenha.
 
 - Tela de cadastro:
    * Possui um formulário onde pede os dados do Usuário, para que o acesso do mesmo seja liberado posteriormente, na tela de login 
    
--
+- Tela Home 
+ * os botões do rodapé funcionam 
+ * aparecem os restaurantes, cada um com seu tipo de gastronomia, tempo de entrega, valor de frete, foto de logo.
+
+- Tela de cardápios 
+ * aparecem cada um dos itens do cardapio, com preço e uma descrição em baixo de tudo 
+
+- Perfil 
+ * permite a alteração dos dados do perfil
     
 ## <h2 id="nao-funciona">❎ Backlog</h2>
 
-- Funcionalidades do Carrinho
-   
+- Após feito o primeiro login, ao entrar no app ele segue direto para a home do app, não podendo fazer novos logins na mesma máquina.
+
+- Na pagina home, os produtos sao exibidos, mas nao é possivel adcionar estes no carrinho    
   
 ## <h2 id="devs">💼 Desenvolvedores</h2>
 - Adrieli Lavratti Figueiredo
