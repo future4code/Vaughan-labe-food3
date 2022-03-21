@@ -1,7 +1,6 @@
 # Projeto IFUTURE 🍔
 
-Link do Surge:  agreeable-jewel.surge.sh
-
+Link do Surge:   loving-fork.surge.sh
 
 <a href="sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#funciona">O que funciona</a> | <a href="#nao-funciona">Backlog</a> | <a href="#devs">Desenvolvedores</a>
 
