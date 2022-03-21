@@ -37,14 +37,14 @@ As seguintes ferramentas foram usadas na construção do projeto:
    * Possui um formulário onde pede os dados do Usuário, para que o acesso do mesmo seja liberado posteriormente, na tela de login 
    
 - Tela Home:
- * os botões do rodapé funcionam 
- * aparecem os restaurantes, cada um com seu tipo de gastronomia, tempo de entrega, valor de frete, foto de logo.
+  * os botões do rodapé funcionam 
+  * aparecem os restaurantes, cada um com seu tipo de gastronomia, tempo de entrega, valor de frete, foto de logo.
 
 - Tela de cardápios:
- * aparecem cada um dos itens do cardapio, com preço e uma descrição em baixo de tudo 
+  * aparecem cada um dos itens do cardapio, com preço e uma descrição em baixo de tudo 
 
 - Perfil:
- * permite a alteração dos dados do perfil
+  * permite a alteração dos dados do perfil
     
 ## <h2 id="nao-funciona">❎ Backlog</h2>
 
