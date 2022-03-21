@@ -4,6 +4,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import BotoesLogado from "../BotoesLogado/BotoesLogado";
 import {useProtecao} from "../useProtecao/useProtecao";
 import RestaurantCard from "./RestaurantCard";
+import { HomeBody } from "./styled";
 
 const Home= () => {
     
@@ -53,14 +54,12 @@ const Home= () => {
     )
   })
 
-  console.log(restaurants)
-    
     return (
-        <div>
-            <h1>Home</h1>
+        <HomeBody>
+            <p>Ifuture</p>
             <BotoesLogado/>
             {restaurantsCard}
-        </div>
+        </HomeBody>
     )
 };
 

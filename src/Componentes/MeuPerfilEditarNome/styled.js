@@ -1,68 +1,57 @@
 import styled from "styled-components";
 
 export const ProfilePageedituser = styled.div`
-    width: 22rem;
-    height: 40rem;
-    padding: 0 0 18.375rem;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Bar = styled.div`
-    width: 22rem;
-    height: 4rem;
-    margin: 0 0 1rem;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.25);
-    background-color: #fff;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 `;
 
 export const Imagem = styled.img`
-    width: 1.44rem;
-    height: 1.5rem;
-    margin: 0.625rem 3.373rem 0.625rem 1rem;
-    object-fit: contain;
-`;
-
-export const ContainerTitle = styled.div`
-    width: 10.938rem;
-    height: 2.75rem;
-    margin: -2.5rem 0;
-    margin-left: 9rem;
-    padding: 0.813rem 4.219rem 0.75rem;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 0px;
 `;
 
 export const Title = styled.span`
-    width: 2.5rem;
-    height: 1.188rem;
-    font-family: Roboto;
-    font-size: 1rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.39px;
-    text-align: center;
-    color: black;
+    font-family: roboto;
 `;
 
 export const Form= styled.form`
-    width: 21em;
+    width: 100%;
+    align-items: center;
     display:flex;
     flex-direction:column;
     text-align:center;
+    >button{
+        width: 20.5rem;
+        height: 2.625rem;
+        margin: 10px;
+        padding: 0.75rem 1rem;
+        border-radius: 2px;
+        border: none;
+        background-color: #e8222e;
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+    }
 `;
 
 export const Input= styled.input`
-    width: 19rem;
-    height: 2.5rem;
-    font-family: Roboto;
-    font-size: 1rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.39px;
-    color: black;
-    margin:10px;
+    border: 1px solid #b8b8b8;
+    border-radius: 2px;
+    margin: 7px;
+    width: 20.5rem;
+    height: 3.5rem;
 `;
-    

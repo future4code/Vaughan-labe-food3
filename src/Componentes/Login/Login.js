@@ -49,7 +49,7 @@ const Login = () => {
       <form onSubmit={onSubmitForm}>
         <Input
           type="email"
-          placeholder="email@email.com"
+          placeholder="E-Mail"
           name="email"
           value={form.email}
           onChange={onChangeForm}
@@ -67,10 +67,10 @@ const Login = () => {
           required
         />
 
-        <Botao> Entrar </Botao>
+        <Botao> <b>Entrar</b> </Botao>
       </form>
 
-      <BotaoVazio onClick={irParaCadastro}>Não possui cadastro? Clique aqui</BotaoVazio>
+      <BotaoVazio onClick={irParaCadastro}>Não possui cadastro? <b>Clique aqui</b></BotaoVazio>
     </Base>
   );
 };
