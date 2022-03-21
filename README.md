@@ -1,7 +1,6 @@
 # Projeto IFUTURE 🍔
 
-Link do Surge:  agreeable-jewel.surge.sh
-
+Link do Surge:   loving-fork.surge.sh
 
 <a href="sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#funciona">O que funciona</a> | <a href="#nao-funciona">Backlog</a> | <a href="#devs">Desenvolvedores</a>
 
@@ -50,7 +49,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - Após feito o primeiro login, ao entrar no app ele segue direto para a home do app, não podendo fazer novos logins na mesma máquina.
 
-- Na pagina home, os produtos sao exibidos, mas nao é possivel adcionar estes no carrinho    
+- Na pagina home, os produtos sao exibidos, mas nao é possivel adicionar estes no carrinho    
   
 ## <h2 id="devs">💼 Desenvolvedores</h2>
 - Adrieli Lavratti Figueiredo
