@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto IFUTURE 🍔
 
-## Available Scripts
+Link do Surge:   responsible-army.surge.sh
 
-In the project directory, you can run:
+<a href="sobre">Sobre</a> | <a href="#tecnologias">Tecnologias</a> | <a href="#funciona">O que funciona</a> | <a href="#nao-funciona">Backlog</a> | <a href="#devs">Desenvolvedores</a>
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## <h2 id="sobre">📓 Sobre<h2>
 
-### `npm test`
+🚀 Projeto desenvolvido com a proposta de trabalho de conclusão do Módulo Front-end. 
+Nele foi desenvolvido um aplicativo de compra de alimentos e entregues atraves de delivery. 
+Semelhante á alguns outros aplicativos já disponiveis no mercado.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## <h2 id="tecnologias">🛠️ Tecnologias</h2> 
+As seguintes ferramentas foram usadas na construção do projeto:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* JavaScript
+* CSS
+* React
+* estilização feita utilizando Styled-components
+* React Router
+* <a href="https://documenter.getpostman.com/view/7549981/SWTEdGtT#a671fbe5-a360-4cd3-b269-d5a121e19da0" target="_blank">API</a>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## <h2 id="funciona">✅ O que funciona</h2>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Página Inicial:
+    * É a página inicial do site, mostra o logo do site e em seguida redireciona para a tela de login.
+    
+- Tela de Login:
+    * Dispõe de campos para inserir email e senha.
+    * Também há a opção para realizar um novo cadastro caso o usuário ainda não tenha.
 
-### `npm run eject`
+- Tela de cadastro:
+   * Possui um formulário onde pede os dados do Usuário, para que o acesso do mesmo seja liberado posteriormente, na tela de login 
+   
+- Tela Home:
+  * os botões do rodapé funcionam 
+  * aparecem os restaurantes, cada um com seu tipo de gastronomia, tempo de entrega, valor de frete, foto de logo.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Tela de cardápios:
+  * aparecem cada um dos itens do cardapio, com preço e uma descrição em baixo de tudo 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Perfil:
+  * permite a alteração dos dados do perfil
+    
+## <h2 id="nao-funciona">❎ Backlog</h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Após feito o primeiro login, ao entrar no app ele segue direto para a home do app, não podendo fazer novos logins na mesma máquina.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Na pagina home, os produtos sao exibidos, mas nao é possivel adicionar estes no carrinho    
+  
+## <h2 id="devs">💼 Desenvolvedores</h2>
+- Adrieli Lavratti Figueiredo
+- Fábio Asada
+- Fernanda Freitas Medina
+- Rodrigo Brito 
+- Wellington Ferruccio da Gama Junior
